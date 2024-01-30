@@ -48,6 +48,9 @@ eksctl utils associate-iam-oidc-provider \
 
 ## Step-03: Create EC2 Keypair
 - Create a new EC2 Keypair with name as `kube-demo`
+```
+aws ec2 create-key-pair --key-name kube-demo --query 'KeyMaterial' --output text > kube-demo.pem
+```
 - This keypair we will use it when creating the EKS NodeGroup.
 - This will help us to login to the EKS Worker Nodes using Terminal.
 
