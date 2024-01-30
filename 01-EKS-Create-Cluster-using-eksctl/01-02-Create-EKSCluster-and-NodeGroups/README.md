@@ -13,6 +13,7 @@
 
 
 ## Step-01: Create EKS Cluster using eksctl
+- Verify IAM User priviledges to create a cluster: https://eksctl.io/usage/minimum-iam-policies/
 - It will take 15 to 20 minutes to create the Cluster Control Plane 
 ```
 # Create Cluster
