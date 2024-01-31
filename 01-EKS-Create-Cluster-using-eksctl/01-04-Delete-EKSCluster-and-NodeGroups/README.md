@@ -14,7 +14,10 @@ eksctl get nodegroup --cluster=eksdemo1
 eksctl delete nodegroup --cluster=<clusterName> --name=<nodegroupName>
 eksctl delete nodegroup --cluster=eksdemo1 --name=eksdemo1-ng-public1
 ```
-
+if there is error related to eviction
+```
+ eksctl delete nodegroup --disable-eviction.
+```
 ## Step-02: Delete Cluster  
 - We can delete cluster using `eksctl delete cluster`
 ```
@@ -22,7 +25,10 @@ eksctl delete nodegroup --cluster=eksdemo1 --name=eksdemo1-ng-public1
 eksctl delete cluster <clusterName>
 eksctl delete cluster eksdemo1
 ```
-
+if there is error related to eviction
+```
+eksctl delete cluster --disable-nodegroup-eviction 
+```
 ## Important Notes
 
 ### Note-1: Rollback any Security Group Changes
